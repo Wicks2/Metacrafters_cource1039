@@ -1,0 +1,36 @@
+// NFT constructor function
+function NFT(name, eyeColor, shirtType, bling) {
+  this.name = name;
+  this.eyeColor = eyeColor;
+  this.shirtType = shirtType;
+  this.bling = bling;
+}
+
+// Array to store NFT objects
+var myNFTs = [];
+
+// Function to add an NFT to the array
+function createNFT(name, eyeColor, shirtType, bling) {
+  var nft = new NFT(name, eyeColor, shirtType, bling);
+  myNFTs.push(nft);
+}
+
+// Function to print NFT details to console
+function printNFTDetails() {
+  myNFTs.forEach(function (nft, index) {
+    console.log(`NFT ${index + 1}:`);
+    console.log(`Name: ${nft.name}`);
+    console.log(`Eye Color: ${nft.eyeColor}`);
+    console.log(`Shirt Type: ${nft.shirtType}`);
+    console.log(`Bling: ${nft.bling}`);
+    console.log('----------------------');
+  });
+}
+
+// Create some NFTs
+createNFT("NFT 1", "red", "t-shirt", "necklace");
+createNFT("NFT 2", "yellow", "jacket", "golden ring");
+createNFT("NFT 3", "white", "mango shirt", "gols bracelet");
+
+// Print NFT details
+printNFTDetails();
